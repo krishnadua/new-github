@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Dua Python Tutorial</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+        }
+        .header {
+            font-size: 26px;
+            color: #fff;
+            background-color: #007BFF;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .footer {
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+        .main {
+            margin-top: 80px; /* Height of header */
+            flex: 1;
+            padding: 20px;
+        }
+        .content {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 60px; /* Height of footer */
+        }
+        h2 {
+            font-size: 26px;
+            color: #333;
+            font-family: 'Verdana', sans-serif;
+            margin-top: 0;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 16px;
+        }
+        code {
+            display: block;
+            white-space: pre-wrap;
+        }
+        button {
+            margin-top: 10px;
+            padding: 12px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .previous-btn {
+            display: block;
+            margin-top: 20px;
+        }
+        .balloons {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+            overflow: hidden;
+        }
+        .balloons div {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #FF6347;
+            opacity: 0;
+            animation: balloons 10s ease-in-out forwards;
+        }
+        @keyframes balloons {
+            0% {
+                transform: translateY(100vh);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+        }
+
+        /* Additional styles for animation */
+        .animate {
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Krishna Dua Python Tutorial
+    </div>
+    <div class="main">
+        <div class="content">
+            <section id="introduction">
+                <h2>Introduction</h2>
+                <p>Welcome to this Python tutorial! This tutorial will guide you through the basics of Python programming. Python is a versatile language that you can use on the backend, frontend, or full stack of a web application.</p>
+            </section>
+
+            <section id="variables">
+                <h2>Variables</h2>
+                <pre><code># This is a comment
+x = 10  # This is an integer
+y = 20.5  # This is a float
+z = "Hello"  # This is a string
+
+print(x)
+print(y)
+print(z)
+                </code></pre>
+                <button onclick="copyCode('variables')">Copy code to clipboard</button>
+            </section>
+
+            <br><br>
+
+            <section id="control-flow">
+                <h2>Control Flow</h2>
+                <pre><code># If statement
+a = 10
+if a > 5:
+    print("a is greater than 5")
+
+# For loop
+for i in range(5):
+    print(i)
+                </code></pre>
+                <button onclick="copyCode('control-flow')">Copy code to clipboard</button>
+            </section>
+
+            <br><br>
+
+            <section id="functions">
+                <h2>Functions</h2>
+                <pre><code>def greet(name):
+    return "Hello, " + name
+
+print(greet("Alice"))
+                </code></pre>
+                <button onclick="copyCode('functions')">Copy code to clipboard</button>
+            </section>
+
+            <br><br>
+
+            <section id="data-structures">
+                <h2>Data Structures</h2>
+                <pre><code># List
+my_list = [1, 2, 3, 4, 5]
+print(my_list)
+
+# Dictionary
+my_dict = {"name": "Alice", "age": 25}
+print(my_dict)
+
+# Tuple
+my_tuple = (1, 2, 3)
+print(my_tuple)
+
+# Set
+my_set = {1, 2, 3, 4, 5}
+print(my_set)
+                </code></pre>
+                <button onclick="copyCode('data-structures')">Copy code to clipboard</button>
+            </section>
+
+            <br><br>
+
+            <section id="modules-and-packages">
+                <h2>Modules and Packages</h2>
+                <pre><code># Importing a module
+import math
+
+print(math.sqrt(16))
+
+# Creating a module
+# In a file named my_module.py
+def add(a, b):
+    return a + b
+
+# In another file
+from my_module import add
+
+print(add(5, 3))
+                </code></pre>
+                <button onclick="copyCode('modules-and-packages')">Copy code to clipboard</button>
+            </section>
+
+            <br><br>
+
+            <section id="exceptions">
+                <h2>Exceptions</h2>
+                <pre><code># Handling exceptions
+try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+finally:
+    print("Execution completed")
+                </code></pre>
+                <button onclick="copyCode('exceptions')">Copy code to clipboard</button>
+                <br><br>
+            </section>
+
+            <section id="file-handling">
+                <h2>File Handling</h2>
+                <pre><code># Writing to a file
+with open('example.txt', 'w') as file:
+    file.write('Hello, World!')
+
+# Reading from a file
+with open('example.txt', 'r') as file:
+    content = file.read()
+    print(content)
+                </code></pre>
+                <button onclick="copyCode('file-handling')">Copy code to clipboard</button>
+                <br><br>
+            </section>
+
+            <section id="conclusion">
+                <h2>Conclusion</h2>
+                <p>Thank you for following this tutorial. We hope it was helpful in getting you started with Python programming. Continue practicing and exploring Python's vast ecosystem to become proficient.</p>
+            </section>
+          
+        </div>
+    </div>
+    <div class="footer">© 2024 Krishna Dua</div>
+
+    <div class="balloons" id="balloons"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Generate balloons
+            const balloonsContainer = document.getElementById('balloons');
+            for (let i = 0; i < 50; i++) {
+                let balloon = document.createElement('div');
+                balloon.style.left = Math.random() * 100 + 'vw';
+                balloon.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+                balloon.style.animationDuration = Math.random() * 3 + 2 + 's';
+                balloonsContainer.appendChild(balloon);
+                
+            }
+        });
+
+        function copyCode(sectionId) {
+            const code = document.querySelector(`#${sectionId} code`).textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Code copied to clipboard!');
+                animatePage(); // Initiate animation after successful copy
+            }).catch(err => {
+                console.error('Failed to copy code: ', err);
+            });
+        }
+
+        function animatePage() {
+            // Add animate class to body to trigger animation
+            document.body.classList.add('animate');
+
+            // Remove animate class after animation completes
+            setTimeout(() => {
+                document.body.classList.remove('animate');
+            }, 1000); // Adjust duration as needed to match your CSS animation duration
+        }
+
+        function scrollToPrevious() {
+            const sections = document.querySelectorAll('section');
+            let currentSection = document.querySelector('section:focus-within');
+            let currentIndex = Array.from(sections).indexOf(currentSection);
+            if (currentIndex > 0) {
+                sections[currentIndex - 1].scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
